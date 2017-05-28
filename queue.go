@@ -1,6 +1,6 @@
 package gopds
 
-// Queue represents persistant queue
+// Queue represents persistent queue
 type Queue struct {
 	head *queueNode
 	tail *queueNode
