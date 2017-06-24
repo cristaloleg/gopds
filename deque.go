@@ -95,10 +95,13 @@ func (d *Deque) TopFront() (interface{}, bool) {
 	switch {
 	case d.IsEmpty():
 		return nil, false
+
 	case d.head != nil:
 		return d.head.value, true
+
 	case d.child != nil:
 		return d.child.TopFront()
+
 	default:
 		return d.tail.value, true
 	}
@@ -109,10 +112,13 @@ func (d *Deque) TopBack() (interface{}, bool) {
 	switch {
 	case d.IsEmpty():
 		return nil, false
+
 	case d.tail != nil:
 		return d.tail.value, true
+
 	case d.child != nil:
 		return d.child.TopFront()
+
 	default:
 		return d.head.value, true
 	}
