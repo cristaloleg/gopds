@@ -1,9 +1,9 @@
-.PHONY: all build bench test cover fmt race cpuprof memprof 
+.PHONY: all build bench test fmt race cpuprof memprof 
 
 TIMESTAMP = $(shell date +"%Y-%m-%d_%H-%M-%S")
 PKG = $(shell go list ./... | grep -v /vendor/)
 
-all: install lint build test cover
+all: install build test
 
 install:
 	go get github.com/golang/lint/golint
